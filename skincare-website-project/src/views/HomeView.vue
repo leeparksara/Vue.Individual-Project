@@ -1,4 +1,5 @@
 <script setup>
+  
     import Slider from '../components/Slider.vue'
 </script>
 
@@ -29,6 +30,8 @@
     </div>
     <Slider />
     <!-- image slide starts here -->
+
+
 </template>
 
 <!-- vue js script for image slider -->

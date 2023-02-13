@@ -1,6 +1,7 @@
 <script setup>
     import { RouterLink, RouterView } from 'vue-router'
     import Fetch from './Fetch.vue'
+    import UserLogIn from './UserLogIn.vue'
 </script>
 
 <template>
@@ -30,6 +31,7 @@
                     <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
                         Hella Co.
                     </h5>
+
                     <button
                         type="button"
                         class="btn-close btn-close-white"
@@ -37,6 +39,9 @@
                         aria-label="Close"
                     ></button>
                 </div>
+
+                <UserLogIn />
+
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
@@ -48,7 +53,7 @@
                             >
                         </li>
                         <li class="nav-item">
-                            <RouterLink class="nav-link" to="/"
+                            <RouterLink class="nav-link" to="/NewView"
                                 >About</RouterLink
                             >
                         </li>
@@ -93,3 +98,4 @@
     </nav>
     <RouterView />
 </template>
+<script></script>

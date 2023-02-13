@@ -42,7 +42,7 @@
     }
 </script>
 
-<style>
+<style scoped>
     ul {
         background-color: rgb(231, 222, 240);
     }

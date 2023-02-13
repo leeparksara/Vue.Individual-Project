@@ -92,5 +92,4 @@
         background-color: rgb(32, 30, 30);
         width: 160px;
     }
-
 </style>
