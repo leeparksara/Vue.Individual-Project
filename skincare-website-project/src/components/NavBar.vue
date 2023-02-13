@@ -1,20 +1,13 @@
 <script setup>
     import { RouterLink, RouterView } from 'vue-router'
+    import Fetch from './Fetch.vue'
 </script>
 
 <template>
     <nav class="navbar navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
             <!--search bar-->
-            <form class="d-flex mt-3" role="search">
-                <input
-                    class="form-control me-2"
-                    type="search"
-                    placeholder="Search product"
-                    aria-label="Search"
-                />
-                <button class="btn btn-success" type="submit">Search</button>
-            </form>
+            <Fetch />
             <!-- Brand logo -->
             <RouterLink class="navbar-brand" to="/">Hella Co.</RouterLink>
 
@@ -74,8 +67,8 @@
 
                             <ul class="dropdown-menu dropdown-menu-dark">
                                 <li>
-                                    <a class="dropdown-item" href="#"
-                                        >Dry Skin</a
+                                    <RouterLink class="dropdown-item" to="/"
+                                        >Dry Skin</RouterLink
                                     >
                                 </li>
                                 <li>

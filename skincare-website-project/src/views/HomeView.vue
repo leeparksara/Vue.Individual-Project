@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+    import Slider from '../components/Slider.vue'
+</script>
 
 <template>
     <div id="home-wrapper">
@@ -25,29 +27,13 @@
             />
         </div>
     </div>
-
+    <Slider />
     <!-- image slide starts here -->
-
-
-
-
 </template>
 
 <!-- vue js script for image slider -->
 
-<script>
-   
-    export default {
-        data() {
-            return {
-                text: 'New Launch'
-            }
-        },
-        methods: {
-            onClick() {}
-        }
-    }
-</script>
+<script></script>
 
 <style scoped>
     .backgroundImg {

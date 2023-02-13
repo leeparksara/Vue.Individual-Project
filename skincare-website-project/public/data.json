@@ -1,0 +1,64 @@
+[
+    {
+        "product": "Peeling mask",
+        "price": "100 usd",
+        "id": "01",
+        "img": "../src/assets/images/img-2.jpg"
+    },
+
+    {
+        "product": "Cleanser",
+        "price": "150 usd",
+        "id": "02",
+        "img": "../src/assets/images/img-2.jpg"
+    },
+    {
+        "product": "Serum",
+        "price": "300 usd",
+        "id": "03",
+        "img": "../src/assets/images/img-2.jpg"
+    },
+    {
+        "product": " Primer",
+        "price": "120 usd",
+        "id": "04",
+        "img": "../src/assets/images/img-2.jpg"
+    },
+    {
+        "product": "Vitamin C",
+        "price": "130 usd",
+        "id": "05",
+        "img": "../src/assets/images/img-2.jpg"
+    },
+
+    {
+        "product": "Toner",
+        "price": "108 usd",
+        "id": "06",
+        "img": "../src/assets/images/img-2.jpg"
+    },
+    {
+        "product": "Spry",
+        "price": "110 usd",
+        "id": "07",
+        "img": "../src/assets/images/img-2.jpg"
+    },
+    {
+        "product": "Body wash",
+        "price": "200 usd",
+        "id": "08",
+        "img": "../src/assets/images/img-2.jpg"
+    },
+    {
+        "product": "Eye cream",
+        "price": "95 usd",
+        "id": "09",
+        "img": "../src/assets/images/img-2.jpg"
+    },
+    {
+        "product": "Eye serum",
+        "price": "100 usd",
+        "id": "10",
+        "img": "../src/assets/images/img-2.jpg"
+    }
+]
