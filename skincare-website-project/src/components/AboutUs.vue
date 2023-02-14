@@ -10,6 +10,11 @@
         props: {
             type: string,
             required: true
+        },
+        data() {
+            return {
+                text: 'hello'
+            }
         }
     }
 </script>

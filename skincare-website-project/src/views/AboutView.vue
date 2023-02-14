@@ -1,4 +1,8 @@
+<script setup></script>
+
 <template>
+    <AboutUs />
+
     <div class="about">
         <div class="card" style="width: 18rem">
             <img

@@ -1,8 +1,3 @@
-<script setup>
-  
-    import Slider from '../components/Slider.vue'
-</script>
-
 <template>
     <div id="home-wrapper">
         <div>
@@ -28,20 +23,25 @@
             />
         </div>
     </div>
-    <Slider />
+
     <!-- image slide starts here -->
 
-
+    <div>
+        <SlideShow />
+    </div>
 </template>
 
 <!-- vue js script for image slider -->
 
-<script></script>
+<script>
+    import SlideShow from '../components/SlideShow.vue'
+    export default { name: 'slider-app', components: { SlideShow } }
+</script>
 
 <style scoped>
     .backgroundImg {
         height: 700px;
-        width: 950px;
+        width: 900px;
     }
 
     #home-wrapper {

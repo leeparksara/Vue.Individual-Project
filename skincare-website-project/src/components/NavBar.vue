@@ -1,6 +1,6 @@
 <script setup>
     import { RouterLink, RouterView } from 'vue-router'
-    import Fetch from './Fetch.vue'
+
     import UserLogIn from './UserLogIn.vue'
 </script>
 
@@ -53,7 +53,7 @@
                             >
                         </li>
                         <li class="nav-item">
-                            <RouterLink class="nav-link" to="/NewView"
+                            <RouterLink class="nav-link" to="/"
                                 >About</RouterLink
                             >
                         </li>
@@ -61,16 +61,40 @@
                         <!-- Dropdown list for the products -->
                         <li class="nav-item dropdown">
                             <a
+                                @click="SearchProduct"
                                 class="nav-link dropdown-toggle"
                                 href="#"
                                 role="button"
                                 data-bs-toggle="dropdown"
                                 aria-expanded="false"
                             >
-                                Products
+                                Product
                             </a>
 
-                            <ul class="dropdown-menu dropdown-menu-dark">
+                            <table class="product-list">
+                                <thead>
+                                    <tr>
+                                        <th>name</th>
+                                        <th>price</th>
+                                        <th>Quantity</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr v-for="item in items" :key="item">
+                                        <td>
+                                            {{ item.product }}
+                                        </td>
+                                        <td>
+                                            {{ item.price }}
+                                        </td>
+                                        <td>
+                                            {{ item.quantity }}
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <!--   <ul class="dropdown-menu dropdown-menu-dark">
                                 <li>
                                     <RouterLink class="dropdown-item" to="/"
                                         >Dry Skin</RouterLink
@@ -89,7 +113,10 @@
                                         >Body Care
                                     </a>
                                 </li>
-                            </ul>
+
+
+
+                     </ul> -->
                         </li>
                     </ul>
                 </div>
@@ -98,4 +125,44 @@
     </nav>
     <RouterView />
 </template>
-<script></script>
+<script>
+    import axios from 'axios'
+
+    export default {
+        data() {
+            return {
+                items: []
+            }
+        },
+        methods: {
+            SearchProduct() {
+                axios
+                    .get(`/data.json`)
+                    .then((response) => {
+                        this.items = response.data
+                    })
+                    .catch((error) => {
+                        console.error(error)
+                    })
+            }
+        }
+    }
+</script>
+
+<style scoped>
+    .product-list {
+        background-color: rgb(223, 229, 235);
+        visibility: visible;
+    }
+    tr {
+        display: flex;
+        justify-content: space-evenly;
+        column-gap: 30px;
+        row-gap: 20px;
+        margin: 10px;
+        color: rgb(31, 30, 30);
+    }
+    th {
+        color: rgb(34, 113, 174);
+    }
+</style>
