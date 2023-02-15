@@ -35,7 +35,15 @@
 
 <script>
     import SlideShow from '../components/SlideShow.vue'
-    export default { name: 'slider-app', components: { SlideShow } }
+    export default {
+        name: 'slider-app',
+        components: { SlideShow },
+        data() {
+            return {
+                text: 'New Collection'
+            }
+        }
+    }
 </script>
 
 <style scoped>

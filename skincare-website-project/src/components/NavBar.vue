@@ -53,7 +53,7 @@
                             >
                         </li>
                         <li class="nav-item">
-                            <RouterLink class="nav-link" to="/"
+                            <RouterLink class="nav-link" to="/us"
                                 >About</RouterLink
                             >
                         </li>
