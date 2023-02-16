@@ -1,4 +1,5 @@
 <template>
+    <!-- About us router component   -->
     <div>
         <h3 style="white-space: pre-line">
             {{ aboutText }}
@@ -31,6 +32,7 @@
         column-gap: 2%;
         margin: 2%;
         margin-top: 10%;
+        margin-bottom: 10%;
     }
     h3 {
         font-size: medium;

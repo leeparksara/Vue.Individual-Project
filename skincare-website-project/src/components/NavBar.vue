@@ -7,8 +7,6 @@
 <template>
     <nav class="navbar navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
-            <!--search bar-->
-            <Fetch />
             <!-- Brand logo -->
             <RouterLink class="navbar-brand" to="/">Hella Co.</RouterLink>
 
@@ -59,7 +57,7 @@
                         </li>
 
                         <!-- Dropdown list for the products -->
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown" @click="showTable = true">
                             <a
                                 @click="SearchProduct"
                                 class="nav-link dropdown-toggle"
@@ -70,53 +68,30 @@
                             >
                                 Product
                             </a>
-
-                            <table class="product-list">
-                                <thead>
-                                    <tr>
-                                        <th>name</th>
-                                        <th>price</th>
-                                        <th>Quantity</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr v-for="item in items" :key="item">
-                                        <td>
-                                            {{ item.product }}
-                                        </td>
-                                        <td>
-                                            {{ item.price }}
-                                        </td>
-                                        <td>
-                                            {{ item.quantity }}
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
-                            <!--   <ul class="dropdown-menu dropdown-menu-dark">
-                                <li>
-                                    <RouterLink class="dropdown-item" to="/"
-                                        >Dry Skin</RouterLink
-                                    >
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#"
-                                        >Oily Skin</a
-                                    >
-                                </li>
-                                <li>
-                                    <hr class="dropdown-divider" />
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#"
-                                        >Body Care
-                                    </a>
-                                </li>
-
-
-
-                     </ul> -->
+                            <div v-show="showTable">
+                                <table class="product-list">
+                                    <thead>
+                                        <tr>
+                                            <th>name</th>
+                                            <th>price</th>
+                                            <th>Quantity</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr v-for="item in items" :key="item">
+                                            <td>
+                                                {{ item.product }}
+                                            </td>
+                                            <td>
+                                                {{ item.price }}
+                                            </td>
+                                            <td>
+                                                {{ item.quantity }}
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -131,6 +106,7 @@
     export default {
         data() {
             return {
+                showTable: false,
                 items: []
             }
         },

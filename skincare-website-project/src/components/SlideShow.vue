@@ -3,7 +3,7 @@
     <div>
         <!-- Wrapping the div and img tag with transition tag to animate the images-->
         <transition-group name="fade" tag="div" class="slideImage">
-            <!-- Use v-for eirective to loop through the array of images with their index-->
+            <!-- Use v-for directive to loop through the array of images with their index-->
             <div v-for="i in [currentIndex]" :key="i">
                 <img :src="currentImg" class="slides" />
             </div>
@@ -26,7 +26,7 @@
                 currentIndex: 0
             }
         },
-        // mounted function will render the images auto
+
         mounted: function () {
             this.startSlide()
         },
@@ -67,15 +67,13 @@
         opacity: 0;
     }
 
-    /* Position the "next button" to the right */
-    /* On hover, add a black background color with a little bit see-through */
-
     .slides {
         width: 1000px;
         height: 600px;
         margin: 60px;
 
         margin-left: 16%;
+        margin-bottom: 10%;
     }
     .slideImage {
         justify-content: center;

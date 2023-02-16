@@ -1,8 +1,9 @@
 <template>
+    <!--  Hero image and hero text -->
     <div id="home-wrapper">
         <div>
             <img
-                src="../assets/trinh-minh-th-h4cM5JQmxoQ-unsplash.jpg"
+                src="../assets/images/hero.avif"
                 alt="background"
                 class="backgroundImg"
             />
@@ -15,6 +16,8 @@
                 with UV protection, new-age UV filters to protect from UVA/UVB
                 rays.
             </p>
+
+            <!-- Link that takes user to another page  -->
             <input
                 class="inpt"
                 type="button"
@@ -24,9 +27,9 @@
         </div>
     </div>
 
-    <!-- image slide starts here -->
+    <!-- Slider component starts here -->
 
-    <div>
+    <div class="sli">
         <SlideShow />
     </div>
 </template>
@@ -35,6 +38,7 @@
 
 <script>
     import SlideShow from '../components/SlideShow.vue'
+
     export default {
         name: 'slider-app',
         components: { SlideShow },
@@ -48,8 +52,8 @@
 
 <style scoped>
     .backgroundImg {
-        height: 700px;
-        width: 900px;
+        height: 650px;
+        width: 950px;
     }
 
     #home-wrapper {
@@ -68,5 +72,8 @@
         padding: 7px;
         background-color: black;
         color: white;
+    }
+    .sli {
+        position: sticky;
     }
 </style>

@@ -1,23 +1,19 @@
 <template>
-    <div class="form">
-        <form @submit.prevent="submitEvent">
-            <div>
-                <label for="name"> Name:</label>
-                <input id="name" type="text" v-model="user.name" />
-                <span class="error" v-if="errors.name">{{ errors.name }}</span>
-            </div>
-            <div>
-                <label for="email">Email:</label>
-                <input id="email" type="email" v-model="user.email" />
-                <span class="error" v-if="errors.email">
-                    {{ errors.email }}</span
-                >
-            </div>
-            <div>
-                <button type="submit">Submit</button>
-            </div>
-        </form>
-    </div>
+    <form class="form" @submit.prevent="submitEvent">
+        <div>
+            <label for="name"> Name:</label> <br />
+            <input id="name" type="text" v-model="user.name" />
+            <span class="error" v-if="errors.name">{{ errors.name }}</span>
+        </div>
+        <div>
+            <label for="email">Email:</label> <br />
+            <input id="email" type="email" v-model="user.email" />
+            <span class="error" v-if="errors.email"> {{ errors.email }}</span>
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
 </template>
 
 <script>
@@ -54,6 +50,7 @@
         display: flex;
         flex-direction: column;
         row-gap: 20px;
+        margin: 5%;
     }
 
     button {

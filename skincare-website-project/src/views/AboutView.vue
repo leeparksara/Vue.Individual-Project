@@ -1,6 +1,7 @@
 <script setup></script>
 
 <template>
+    <!-- Products cards  -->
     <div class="about">
         <div class="card" style="width: 18rem">
             <img
